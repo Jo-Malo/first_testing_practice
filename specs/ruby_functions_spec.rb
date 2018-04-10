@@ -47,38 +47,56 @@ class Functions_Practice < MiniTest::Test
     assert_equal( 3, add_result )
   end
 
-#   def test_number_to_full_name()
-#     first_month_string = number_to_full_month_name( 1 )
-#     third_month_string = number_to_full_month_name( 3 )
-#     ninth_month_string = number_to_full_month_name( 9 )
-#     assert_equal( "January", first_month_string )
-#     assert_equal( "March", third_month_string )
-#     assert_equal( "September", ninth_month_string )
-#   end
-#
-#   def test_substring()
-#     first_month_string = number_to_short_month_name( 1 )
-#     third_month_string = number_to_short_month_name( 3 )
-#     ninth_month_string = number_to_short_month_name( 9 )
-#     assert_equal( "Jan", first_month_string )
-#     assert_equal( "Mar", third_month_string )
-#     assert_equal( "Sep", ninth_month_string )
-#   end
-#
-#
+  def test_number_to_full_name()
+    first_month_string = number_to_full_month_name( 1 )
+    third_month_string = number_to_full_month_name( 3 )
+    ninth_month_string = number_to_full_month_name( 9 )
+    assert_equal( "January", first_month_string )
+    assert_equal( "March", third_month_string )
+    assert_equal( "September", ninth_month_string )
+  end
+
+  def test_substring()
+    first_month_string = number_to_short_month_name( 1 )
+    third_month_string = number_to_short_month_name( 3 )
+    ninth_month_string = number_to_short_month_name( 9 )
+    assert_equal( "Jan", first_month_string )
+    assert_equal( "Mar", third_month_string )
+    assert_equal( "Sep", ninth_month_string )
+  end
+
+
 #
 #   #Further
 #
-#   #Given the length of a side of a cube calculate the volume
+  def test_volume_of_cube()
+    multiply_result = multiply ( 5, 5, 5 )
+    assert_equal ( 27, multiply_result)
+  end
+    #Given the length of a side of a cube calculate the volume
 #   def test_volume_of_cube()
 #     #add test code here
 #   end
 #
+  def test_volume_of_sphere() #did google help for this one but unsure of syntax
+    PI = 3.14
+    fraction = 4/3.0
+    radius = 4.0
+    result_vol = test_volume_of_sphere (fraction * (radius ** 3) * PI)
+    assert_equal (268, result_vol )
+  end
+
 #   #Given the radius of a sphere calculate the volume
 #   def test_volume_of_sphere()
 #     #add test code here
 #   end
 #
+  def test_fahrenheit_to_celsius()
+   F = farenheit( 40 )
+   result_cel = (F - 32) (* 5) (/ 9)
+   assert_equal (4, result_cel )
+  end
+
 #   #Given a value in farenheit, convert this into celsius.
 #   def test_fahrenheit_to_celsius()
 #     #add test code here
