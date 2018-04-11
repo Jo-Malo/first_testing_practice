@@ -52,3 +52,15 @@ def number_to_short_month_name(month_number)
     return "Sep"
   end
 end
+
+def volume_of_a_cube(length, breadth, height)
+ return length * breadth * height
+end
+
+def test_volume_of_sphere(pi, fraction, radius)
+  return pi * fraction * radius
+end
+
+def test_fahrenheit_to_celcius(f, a, b, c)
+  return (f - a) * b / c
+end
