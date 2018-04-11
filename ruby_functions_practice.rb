@@ -53,14 +53,17 @@ def number_to_short_month_name(month_number)
   end
 end
 
-def volume_of_a_cube(length, breadth, height)
- return length * breadth * height
+def volume_of_cube(length_of_side)
+  volume = length_of_side ** 3
+  return volume
 end
 
-def test_volume_of_sphere(pi, fraction, radius)
-  return pi * fraction * radius
+def volume_of_sphere(radius)
+ volume = (4.0 / 3.0) * Math::PI * (radius ** 3)
+ return volume.round(2)
 end
 
-def test_fahrenheit_to_celcius(f, a, b, c)
-  return (f - a) * b / c
+def fahrenheit_to_celcius(farenheit)
+celsius = (fahrenheit - 32) * (5.0/9.0)
+return celsius.round(2)
 end
